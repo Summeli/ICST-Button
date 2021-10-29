@@ -1,36 +1,43 @@
 /*
-  Knock Sensor
+ * ICST-Button - a buttot that decteds ice axe hits in ice climbing competition
 
-  This sketch reads a piezo element to detect a knocking sound.
-  It reads an analog pin and compares the result to a set threshold.
-  If the result is greater than the threshold, it writes "knock" to the serial
-  port, and toggles the LED on pin 13.
+  This sketch reads a piezo element to detect a hig by ice axe and it respons with sound
+  and it controls relay to give timing events into the timing system in ice climbing competition.
 
   The circuit:
+
+  Detecting the ice axe
   - positive connection of the piezo attached to analog in 0
   - negative connection of the piezo attached to ground
   - 1 megohm resistor attached from analog in 0 to ground
 
-  created 25 Mar 2007
-  by David Cuartielles <http://www.0j0.org>
-  modified 30 Aug 2011
-  by Tom Igoe
+  Play sound with PWM via toneAC
+    - spekaer connected to the 9 and 10 pins
+    - 1M resistor to protect the gates of arduino
 
-  This example code is in the public domain.
-
-  https://www.arduino.cc/en/Tutorial/BuiltInExamples/Knock
+  Controlling the releay
+    
 */
 
+#include <toneAC.h>
 
 // these constants won't change:
 const int ledPin = 13;      // LED connected to digital pin 13
 const int knockSensor = A0; // the piezo is connected to analog pin 0
-const int threshold = 10;  // threshold value to decide when the detected sound is a knock or not
+const int threshold = 100;  // threshold value to decide when the detected sound is a knock or not
 
 
 // these variables will change:
 int sensorReading = 0;      // variable to store the value read from the sensor pin
 int ledState = LOW;         // variable used to store the last LED status, to toggle the light
+
+int frequency = 2000;
+
+void playSound() {
+  toneAC(frequency);
+  delay(500);
+  toneAC(0);
+}
 
 void setup() {
   pinMode(ledPin, OUTPUT); // declare the ledPin as as OUTPUT
@@ -49,6 +56,7 @@ void loop() {
     digitalWrite(ledPin, ledState);
     // send the string "Knock!" back to the computer, followed by newline
     Serial.println("Knock!");
+    playSound();
   }
   delay(100);  // delay to avoid overloading the serial port buffer
 }
