@@ -147,6 +147,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -1197,6 +1199,120 @@ We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a
 </deviceset>
 </devicesets>
 </library>
+<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<packages>
+<package name="AL60P" urn="urn:adsk.eagle:footprint:6240015/1" library_version="2">
+<description>&lt;b&gt;SPEAKER&lt;/b&gt;</description>
+<circle x="0" y="0" radius="6.096" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="1.27" width="0.1524" layer="21"/>
+<pad name="1" x="-3.7592" y="0" drill="1.016" diameter="2.54" shape="octagon"/>
+<pad name="2" x="3.7592" y="0" drill="1.016" diameter="2.54" shape="octagon"/>
+<text x="-2.54" y="6.35" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.8862" y="-3.81" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="AL11P" urn="urn:adsk.eagle:footprint:6240016/1" library_version="2">
+<description>&lt;b&gt;SPEAKER&lt;/b&gt;</description>
+<circle x="0" y="0" radius="5.715" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="6.223" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="1.016" width="0.1524" layer="21"/>
+<pad name="-" x="-2.286" y="0" drill="1.016" diameter="1.905" shape="octagon"/>
+<pad name="+" x="2.286" y="0" drill="1.016" diameter="1.905" shape="octagon"/>
+<text x="-3.175" y="6.35" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="PS12" urn="urn:adsk.eagle:footprint:6240017/1" library_version="2">
+<circle x="0" y="0" radius="6.096" width="0.1524" layer="21"/>
+<pad name="P$1" x="-2.5" y="0" drill="1" diameter="2.54"/>
+<pad name="P$2" x="2.5" y="0" drill="1" diameter="2.54"/>
+<text x="-2.54" y="6.35" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.8862" y="-3.81" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="AL60P" urn="urn:adsk.eagle:package:6240661/1" type="box" library_version="2">
+<description>&lt;b&gt;SPEAKER&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="AL60P"/>
+</packageinstances>
+</package3d>
+<package3d name="AL11P" urn="urn:adsk.eagle:package:6240662/1" type="box" library_version="2">
+<description>&lt;b&gt;SPEAKER&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="AL11P"/>
+</packageinstances>
+</package3d>
+<package3d name="PS12" urn="urn:adsk.eagle:package:6240663/1" type="box" library_version="2">
+<packageinstances>
+<packageinstance name="PS12"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="SP" urn="urn:adsk.eagle:symbol:6239510/1" library_version="2">
+<wire x1="-1.905" y1="-0.635" x2="1.905" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-0.635" x2="1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="1.905" y1="2.54" x2="-1.905" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-0.635" x2="-1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="1.905" y1="2.54" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="2.54" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="1.905" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="0" x2="-1.905" y2="2.54" width="0.254" layer="94"/>
+<text x="-3.81" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="+" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SPEAKER" urn="urn:adsk.eagle:component:6241000/1" prefix="SP" library_version="2">
+<description>&lt;b&gt;SPEAKER&lt;/b&gt;&lt;p&gt; Source: Buerklin&lt;p&gt;Added PS12 (for part # PS1240 piezo) &lt;p&gt;http://www.ladyada.net/library/pcb/eaglelibrary.html&lt;p&gt;</description>
+<gates>
+<gate name="S1" symbol="SP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="/AL60P" package="AL60P">
+<connects>
+<connect gate="S1" pin="+" pad="1"/>
+<connect gate="S1" pin="-" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6240661/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/AL11P" package="AL11P">
+<connects>
+<connect gate="S1" pin="+" pad="+"/>
+<connect gate="S1" pin="-" pad="-"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6240662/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/PS12" package="PS12">
+<connects>
+<connect gate="S1" pin="+" pad="P$1"/>
+<connect gate="S1" pin="-" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6240663/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1211,38 +1327,120 @@ We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a
 <part name="LS1" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" deviceset="SPEAKER" device="" package3d_urn="urn:adsk.eagle:package:38560/1"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1MOHM" device="-0603-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39650/1" value="1M"/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="QWIIC_CONNECTOR" device="JS-1MM" package3d_urn="urn:adsk.eagle:package:38096/1"/>
+<part name="PIEZODISK" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SPEAKER" device="/AL11P" package3d_urn="urn:adsk.eagle:package:6240662/1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="20.32" y="93.98" size="1.778" layer="91">Pietzo disk element detects the hits of an ice axe.</text>
+<text x="5.08" y="38.1" size="1.778" layer="91">I2C connection to Sparkfun's
+QIIC Single Relay Board</text>
 </plain>
 <instances>
 <instance part="B1" gate="G$1" x="76.2" y="55.88" smashed="yes">
 <attribute name="NAME" x="66.548" y="87.122" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="66.04" y="25.146" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="LS1" gate="G$1" x="132.08" y="66.04" smashed="yes">
-<attribute name="NAME" x="134.62" y="71.374" size="1.27" layer="95" font="vector" rot="MR0"/>
-<attribute name="VALUE" x="134.62" y="60.706" size="1.27" layer="96" font="vector" rot="R180"/>
+<instance part="LS1" gate="G$1" x="119.38" y="55.88" smashed="yes">
+<attribute name="NAME" x="121.92" y="61.214" size="1.27" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="121.92" y="50.546" size="1.27" layer="96" font="vector" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="10.16" y="38.1" smashed="yes" rot="R180">
-<attribute name="NAME" x="10.16" y="36.576" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="10.16" y="39.624" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
+<instance part="R1" gate="G$1" x="40.64" y="76.2" smashed="yes" rot="R180">
+<attribute name="NAME" x="40.64" y="74.676" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
+<attribute name="VALUE" x="40.64" y="77.724" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
 </instance>
-<instance part="J1" gate="J1" x="35.56" y="30.48" smashed="yes">
-<attribute name="VALUE" x="30.48" y="25.146" size="1.778" layer="96" font="vector" align="top-left"/>
-<attribute name="NAME" x="30.48" y="38.354" size="1.778" layer="95" font="vector"/>
+<instance part="J1" gate="J1" x="43.18" y="38.1" smashed="yes">
+<attribute name="VALUE" x="38.1" y="32.766" size="1.778" layer="96" font="vector" align="top-left"/>
+<attribute name="NAME" x="38.1" y="45.974" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="PIEZODISK" gate="S1" x="40.64" y="83.82" smashed="yes">
+<attribute name="NAME" x="36.83" y="90.17" size="1.778" layer="95"/>
+<attribute name="VALUE" x="36.83" y="80.645" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="N$1" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="*D9"/>
+<pinref part="LS1" gate="G$1" pin="+"/>
+<wire x1="88.9" y1="58.42" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="*D10"/>
+<pinref part="LS1" gate="G$1" pin="-"/>
+<wire x1="88.9" y1="55.88" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="55.88" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="PIEZODISK" gate="S1" pin="+"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="83.82" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="GND@2"/>
+<wire x1="35.56" y1="76.2" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="50.8" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
+<junction x="35.56" y="76.2"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="PIEZODISK" gate="S1" pin="-"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="83.82" x2="45.72" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="A0"/>
+<wire x1="63.5" y1="83.82" x2="48.26" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="83.82" x2="48.26" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="76.2" x2="45.72" y2="76.2" width="0.1524" layer="91"/>
+<junction x="45.72" y="76.2"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="A4"/>
+<wire x1="63.5" y1="73.66" x2="53.34" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J1" gate="J1" pin="SDA"/>
+<wire x1="53.34" y1="73.66" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="43.18" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="40.64" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="A5"/>
+<wire x1="63.5" y1="71.12" x2="50.8" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="71.12" x2="50.8" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="43.18" x2="53.34" y2="43.18" width="0.1524" layer="91"/>
+<junction x="53.34" y="43.18"/>
+<pinref part="J1" gate="J1" pin="SCL"/>
+<junction x="50.8" y="43.18"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="3.3V"/>
+<wire x1="63.5" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="J1" gate="J1" pin="VCC"/>
+<wire x1="55.88" y1="55.88" x2="55.88" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="GND@1"/>
+<wire x1="63.5" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
